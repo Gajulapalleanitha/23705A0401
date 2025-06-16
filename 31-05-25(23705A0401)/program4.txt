@@ -1,0 +1,16 @@
+class Main {
+    public static void main(String[] args) {
+        int[] numbers = {25,75,100,125};
+        int evenCount = countEvenNumbers(numbers);
+        System.out.println("Number of even numbers: " + evenCount);
+    }
+    public static int countEvenNumbers(int[] array) {
+        int count = 0;
+        for (int number : array) {
+            if (number % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+}

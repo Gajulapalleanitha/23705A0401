@@ -1,0 +1,67 @@
+class Main {
+    public static void main(String[] args) {
+        Stack stack=new Stack(5);
+        stack.Push(20); 
+        stack.Push(10); 
+        stack.Push(40);
+        stack.Push(30); 
+        stack.Push(50); 
+        stack.Push(20);
+        stack.Pop();
+        stack.print();
+        System.out.println("The peak value is:"+stack.Peak());
+    }
+}
+class Stack{
+    int[]stack;
+    int size;
+    int top;
+    Stack(int size){
+        this.size=size;
+        this.stack=new int[size];
+        this.top=-1;
+    }
+    boolean isfull(){
+        if(top==size -1){
+            System.err.println("stack is full");
+            return true;
+            }else{
+                return false;
+            }
+    }
+    boolean isEmpty(){
+        if(top== -1){
+            System.err.println("stack is Empty");
+            return true;
+            }else{
+                return false;
+            }
+    }
+    void Push(int val){
+        if(isfull()){
+            return;
+        }
+        top=top+1;
+        stack[top]=val;
+    }
+    int Pop(){
+        if(isEmpty()){
+            return -1;
+        }
+        int val=stack[top];
+        top=top-1;
+            return val;
+    }
+    int Peak(){
+        if(isEmpty()){
+            return -1;
+        }
+        return stack[top];
+    }
+    void print(){
+        for(int i=top;i>=0;i--){
+            System.out.println("|"+stack[i]+"|");
+        }
+        System.out.println("--------------");
+    }
+}

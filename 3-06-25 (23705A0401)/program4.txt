@@ -1,0 +1,14 @@
+public class main{
+    public static void main(string[]args){
+        Queue q=new Queue();
+        q.enqueue(10);
+        q.enqueue(20);
+        q.enqueue(30);
+        q.enqueue(40);
+        int val=q.deeque();
+        System.out.println("Removed value:"val);
+        q.print();
+        System.out.println("length of Queue:"q.lengh());
+    }
+}
+      

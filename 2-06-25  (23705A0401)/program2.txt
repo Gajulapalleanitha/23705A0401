@@ -1,0 +1,37 @@
+class main {
+    public static void main(String[] args) {
+        App a1=new App("insta","timepass",1500,new String []{"super","waste of time","useful"});
+        a1.summary();
+    }
+}
+class App{
+    String name;
+    String category;
+    int downloads;
+    String[]reviews;
+    App(String name,String category,int downloads,String[]reviews)
+    {
+        this.name=name;
+        this.category=category;
+        this.downloads=downloads;
+        this.reviews=reviews;
+    }
+    void summary(){
+        System.out.println(name);  
+        System.out.println(category); 
+        System.out.println(downloads); 
+        System.out.println(reviews);
+        if(downloads>1000){
+            System.out.println("highly papular");
+        }else{
+        System.out.println("less popular");
+        }
+    }
+}
+        
+            
+            
+            
+
+        
+       

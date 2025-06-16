@@ -1,0 +1,19 @@
+class teacher {
+    public static void main(String[] args){
+        String name="anitha";
+        String id="23705A0401";
+        String[] subjects={"emt","verilog","microwave"};
+        String dept="ECE";
+        String qualification="M.tech";
+System.out.println("Teacher name:"+name);
+System.out.println("Teacher id:"+id);
+System.out.println("dept:"+dept);
+System.out.println("qualification:"+qualification);
+System.out.println("subjects:"+subjects);
+for(String subject:subjects){
+    System.out.println(subject +",");
+}
+System.out.println();
+}
+}
+     
